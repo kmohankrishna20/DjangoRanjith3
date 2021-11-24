@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>HOME API </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 0.5px;
+  text-align: center;
+  font-size: 35px;
+  color: yellow;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  <color></color>: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>API End points</h2>
+<p>In this Project Demo, we have created url links, End points and redirected links to respective HTTP calls(GET).Click on the Links for the API calls and view the results</p>
+<p>Resize the browser window to see the responsive effect</p>
+
+<header>
+  <h2>DEVNET</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="{% url 'token' %}">Generate Token</a>.</li>
+      <li><a href="{% url 'get_site_from_dnac' %}">Site Details</a>.</li>
+        <li><a href="{% url 'get_vlan_from_dnac' %}">VLAN Details</a>.</li>
+        <li><a href="{% url 'get_device_family' %}">Device Details</a>.</li>
+        <li><a href="{% url 'get_site_health' %}">Health Details</a>.</li>
+        <li><a href="https://google.com">Google Search</a>.</li>
+    </ul>
+  </nav>
+
+  <article>
+    <h1>Cisco developer documentation</h1>
+    <p>Cisco developer documentation provides in-depth reference information for Cisco product APIs. These APIs are used for networking, automation, mobility and location services, IoT, cloud, security, and collaboration products. Browse the developer documentation for API reference, how-to information, and sample code.</p>
+    <h1>Cisco DNA Center Platform Overview</h1>
+
+<p>Cisco DNA Center is at the heart of Cisco’s intent-based network architecture.
+Cisco DNA Center supports the expression of business intent for network use cases, such as base automation capabilities in the enterprise network.
+The Analytics and Assurance features of Cisco DNA Center provide end-to-end visibility into the network with full context through data and insights.</p>
+  </article>
+</section>
+
+<footer>
+  <li><a href="#home">support</a></li>
+  <li><a href="#news">News</a></li>
+</footer>
+
+</body>
+</html>
