@@ -2,12 +2,12 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import requests
 from requests.auth import HTTPBasicAuth
-from .Auth.auth import token_dict
+from .Auth.auth import token_dict,DNAC
 import os
 
-DNAC_URL = os.environ.get('DNAC_URL')
-DNAC_USER = os.environ.get('DNAC_USER')
-DNAC_PASS = os.environ.get('DNAC_PASS')
+DNAC_URL=DNAC.DNAC_URL
+DNAC_USER=DNAC.DNAC_USER
+DNAC_PASS=DNAC.DNAC_PASS
 
 class EndPoints:
     def index(request):
